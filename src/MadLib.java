@@ -9,49 +9,35 @@ public class MadLib {
     private String verb;
 
     public MadLib() {
-    }
-
-    public MadLib(String adj, String noun, String adv, String verb) {
-        this.adj = adj;
-        this.noun = noun;
-        this.adv = adv;
-        this.verb = verb;
+        this.savedStories = new ArrayList<String>();
     }
 
     public String getStory() {
         return story;
     }
 
-    public void setStory(String story) {
-        this.story = story;
-    }
+    public void setStory() {
+        String story = String.format("""  
+                Once upon a time, in a %s kingdom, there lived a brave %s who was known for their %s skills. 
+                They were admired by all for their %s heart and %s spirit. One day, a second %s appeared in the kingdom, causing chaos and %s, spreading fear among the people. 
+                Our brave %s knew they had to take action and %s the %s to restore peace and harmony. 
+                With their %s determination and %s quick thinking, they embarked on a thrilling adventure, facing numerous challenges along the way. 
+                Finally, after a %s battle, the brave %s emerged victorious, saving the kingdom and becoming a %s legend in the process.
+                """, this.adj, this.noun, this.adv, this.adj, this.noun, this.noun, this.adv, this.noun, this.verb, this.noun, this.adj, this.adv, this.adj, this.noun, this.adj);
 
-    public String getAdj() {
-        return adj;
+        this.story = story;
     }
 
     public void setAdj(String adj) {
         this.adj = adj;
     }
 
-    public String getNoun() {
-        return noun;
-    }
-
     public void setNoun(String noun) {
         this.noun = noun;
     }
 
-    public String getAdv() {
-        return adv;
-    }
-
     public void setAdv(String adv) {
         this.adv = adv;
-    }
-
-    public String getVerb() {
-        return verb;
     }
 
     public void setVerb(String verb) {
